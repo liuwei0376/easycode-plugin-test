@@ -1,0 +1,21 @@
+server:
+  address: 111.111.111.111
+  port: 8089
+  tomcat:
+    uri-encoding: UTF-8
+
+
+spring:
+  application:
+    name: api
+
+  datasource:
+    url: jdbc:mysql://${MYSQL_SERVER_IP}:${MYSQL_SERVER_PORT}/user?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: XXXX
+    password: YYYY
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+
+mybatis:
+  mapper-locations: classpath:/mapper/*Dao.xml
+  type-aliases-package: com.demo.entity
